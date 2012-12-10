@@ -8,7 +8,7 @@
 #
 
 checker_dir=$(dirname $0)
-cd $checker_dir
+pushd $checker_dir
 
 tests_dir="tests"
 config_file="./config"
@@ -68,4 +68,4 @@ END {
 
 printf "\n%-20s ............... %5s/100.00\n" "Total" "$total"
 
-cd -
+popd
