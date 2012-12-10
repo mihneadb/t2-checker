@@ -7,6 +7,9 @@
 # 2012, Razvan Deaconescu, razvan.deaconescu@cs.pub.ro
 #
 
+checker_dir=$(dirname $0)
+cd $checker_dir
+
 tests_dir="tests"
 config_file="./config"
 log_base="/tmp/rl-checker-$(date +%F-%T)"
@@ -64,3 +67,5 @@ END {
 }')
 
 printf "\n%-20s ............... %5s/100.00\n" "Total" "$total"
+
+cd -
